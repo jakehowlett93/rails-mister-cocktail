@@ -1,0 +1,17 @@
+.cocktail-container {
+  ul {
+    display: flex;
+    height: 900px;
+    justify-content: space-between;
+    align-content: space-between;
+    list-style-type: none;
+    padding: 56px 24px;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .card {
+  width: 300px;
+  height: 350px;
+  background-color: white;
+  }
+}

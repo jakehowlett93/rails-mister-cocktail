@@ -10,7 +10,7 @@ body {
 .content-container {
   background-image: asset-url('neon_background.jpg');
   background-size: cover;
-  min-height: 150vh;
+  min-height: 120vh;
   animation: none;
   position: relative;
 }
@@ -50,21 +50,20 @@ body {
     inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */
     inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */
     inset 0 -15px 30px rgba(0,0,0,0.3); /* Dark Background */
-
-    &:hover {
-      text-decoration: none;
-      color: rgb(173, 167, 167);
-    }
 }
 
 
 
 #new-btn {
   position: absolute;
-  top: 10px;
-  right: 30px;
+  top: 8px;
+  right: 16px;
   font-family: 'Rancho', cursive;
   color: white;
   font-size: 24px;
+  &:hover {
+      text-decoration: none;
+      color: rgb(173, 167, 167);
+    }
 }
 

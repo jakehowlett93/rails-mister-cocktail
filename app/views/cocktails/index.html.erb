@@ -1,7 +1,9 @@
 <h1>Cocktails</h1>
 <%= link_to "New Cocktail", new_cocktail_path, class: "glass-button", id: "new-btn" %>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
+<div class="cocktail-container">
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+    <li class="card"><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+    <% end %>
+  </ul>
+</div>
