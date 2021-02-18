@@ -18,17 +18,9 @@
         <%= link_to cocktails_path, class: "navbar-brand" do %>
           <%= image_tag "logo.png", alt: "Mister Cocktail", width: 200 %>
         <% end %>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <%= link_to "Design Your Cocktail", new_cocktail_path, class: "navbar-link" %>
-            </li>
-          </ul>
-        </div>
       </div>
-      <div class="neon-border">
-        <div class="content-container">
+      <div>
+        <div class="content-container neon-border">
           <%= yield %>
         </div>
       </div>
