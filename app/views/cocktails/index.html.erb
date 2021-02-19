@@ -9,8 +9,10 @@
             <div class="d-flex flex-row flex-wrap justify-content-around carousel-row">
               <% sub_arr.each do |cocktail| %>
                 <div class="cocktail-card">
-                  <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "cocktail-link" %></h2>
+                  <%= link_to cocktail_path(cocktail), class: "cocktail-link" do %>
+                  <h2><%= cocktail.name %></h2>
                   <%= photo_for(cocktail) %>
+                  <% end %>
                 </div>
               <% end %>
             </div>
