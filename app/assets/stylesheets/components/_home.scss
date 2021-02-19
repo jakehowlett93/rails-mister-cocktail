@@ -62,6 +62,7 @@ body {
   font-family: 'Rancho', cursive;
   color: white;
   font-size: 24px;
+  z-index: 99;
   &:hover {
       text-decoration: none;
       color: rgb(173, 167, 167);

@@ -1,23 +1,18 @@
-<h1>Cocktails</h1>
-<%= link_to "New Cocktail", new_cocktail_path, class: "glass-button", id: "new-btn" %>
-
-<% cocktails_subarray = @cocktails.each_slice(6).to_a %>
 
 
-
-
+  <% cocktails_subarray = @cocktails.each_slice(6).to_a %>
 <div id="cocktail-carousel" class="carousel slide" data-interval="false">
   <div class="carousel-inner">
-    <% cocktails_subarray.each_with_index do |arr, index| %>
+    <% cocktails_subarray.each_with_index do |sub_arr, index| %>
       <% first_slide = index == 0 ? true : false %>
       <% if first_slide %>
         <div class="carousel-item active">
           <div class="container carousel-container">
             <div class="d-flex flex-row flex-wrap justify-content-around carousel-row">
-              <% arr.each do |cocktail| %>
+              <% sub_arr.each do |cocktail| %>
                 <div class="cocktail-card">
-                  <%= cocktail.name %>
-                  <%= set_photo_for(cocktail) %>
+                  <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "cocktail-link" %></h2>
+                  <%= photo_for(cocktail) %>
                 </div>
               <% end %>
             </div>
@@ -27,9 +22,10 @@
         <div class="carousel-item">
           <div class="container carousel-container">
             <div class="d-flex flex-row flex-wrap justify-content-around carousel-row">
-              <% arr.each do |cocktail| %>
+              <% sub_arr.each do |cocktail| %>
                 <div class="cocktail-card">
-                  <%= cocktail.name %>
+                  <h2><%= cocktail.name %></h2>
+                  <%= photo_for(cocktail) %>
                 </div>
               <% end %>
             </div>

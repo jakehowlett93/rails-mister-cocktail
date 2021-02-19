@@ -1,3 +1,17 @@
 // Place all the styles related to the doses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+#back-btn {
+  position: absolute;
+  padding: 5px 30px;
+  top: 8px;
+  left: 43px;
+  font-family: 'Rancho', cursive;
+  color: white;
+  font-size: 24px;
+  z-index: 99;
+  &:hover {
+      text-decoration: none;
+      color: rgb(173, 167, 167);
+    }
+}

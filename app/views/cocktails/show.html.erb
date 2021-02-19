@@ -1,13 +1,19 @@
-<h1><%= @cocktail.name %></h1>
-<h3>Ingredients:</h3>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li>
-      <%= dose.description %>
-      <%= dose.ingredient.name %>
-      <%= link_to 'Delete', dose_path(dose), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?"} %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail) %>
-<%= link_to 'back', cocktails_path, class: "navbar-link" %>
+
+<div class="show-cocktail-card">
+  <h1><%= @cocktail.name %></h1>
+  <%= big_photo_for(@cocktail) %>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li>
+        <div>
+          <%= dose.description %>
+          <%= dose.ingredient.name %>
+          <%= link_to 'Delete', dose_path(dose), class: "delete-btn", method: :delete, data: { confirm: "Are you sure?"} %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-secondary" %>
+</div>
+
+

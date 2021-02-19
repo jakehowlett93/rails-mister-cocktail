@@ -1,2 +1,4 @@
-<%= render 'dose_form', cocktail: @cocktail, dose: @dose %> 
-<%= link_to 'back', cocktail_path(params[:cocktail_id]) %>
+<%= link_to 'back', cocktail_path(params[:cocktail_id]), class: "glass-button", id: "back-btn" %>
+<div class="form-container">
+  <%= render 'dose_form', cocktail: @cocktail, dose: @dose %> 
+</div>
