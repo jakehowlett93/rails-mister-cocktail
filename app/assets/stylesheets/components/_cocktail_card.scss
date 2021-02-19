@@ -2,7 +2,7 @@
 width: 300px;
 height: 350px;
 background-color:#222831ef;
-margin-bottom: 170px;
+margin-bottom: 30px;
 border-radius: 8px;
 text-align: center;
 border: 1px solid black;
@@ -71,4 +71,10 @@ box-shadow: 1px 2px black;
 
 .delete-btn:hover {
   color: white;
+}
+
+@include media-breakpoint-up(lg) {
+  .cocktail-card {
+    margin-bottom: 170px;
+  }
 }
