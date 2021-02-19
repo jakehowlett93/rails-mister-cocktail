@@ -73,8 +73,20 @@ box-shadow: 1px 2px black;
   color: white;
 }
 
+@include media-breakpoint-up(md) {
+  .cocktail-card {
+    margin-bottom: 30px;
+  }
+}
+
 @include media-breakpoint-up(lg) {
   .cocktail-card {
-    margin-bottom: 170px;
+    margin-bottom: 40px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .cocktail-card {
+    margin-bottom: 64px;
   }
 }

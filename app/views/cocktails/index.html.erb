@@ -1,6 +1,4 @@
-
-
-  <% cocktails_subarray = @cocktails.each_slice(6).to_a %>
+<% cocktails_subarray = @cocktails.each_slice(6).to_a %>
 <div id="cocktail-carousel" class="carousel slide" data-interval="false">
   <div class="carousel-inner">
     <% cocktails_subarray.each_with_index do |sub_arr, index| %>
