@@ -9,7 +9,8 @@ body {
 }
 
 .content-container {
-  background-image: asset-url('neon_background.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+                  asset-url('neon_background.jpg');
   background-size: cover;
   min-height: 1170px;
   animation: none;
@@ -67,5 +68,9 @@ body {
       text-decoration: none;
       color: rgb(173, 167, 167);
     }
+}
+
+.light-background {
+  background-color: rgba(255, 255, 255, 0.26);
 }
 
