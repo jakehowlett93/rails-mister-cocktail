@@ -17,7 +17,7 @@
               <% arr.each do |cocktail| %>
                 <div class="cocktail-card">
                   <%= cocktail.name %>
-                  <%= cl_image_tag("dh51wnb9fkvfzmglfnjx", width: 50, height: 70, crop: :fill) %>
+                  <%= set_photo_for(cocktail) %>
                 </div>
               <% end %>
             </div>
