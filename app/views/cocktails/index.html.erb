@@ -13,15 +13,8 @@
       <% if first_slide %>
         <div class="carousel-item active">
           <div class="container carousel-container">
-            <div class="row justify-content-between carousel-top-row">
-              <% arr.slice(0, 3).each do |cocktail| %>
-                <div class="cocktail-card">
-                  <%= cocktail.name %>
-                </div>
-              <% end %>
-            </div>
-            <div class="row justify-content-between carousel-bottom-row">
-              <% arr.slice(3, 3).each do |cocktail| %>
+            <div class="d-flex flex-row flex-wrap justify-content-around carousel-row">
+              <% arr.each do |cocktail| %>
                 <div class="cocktail-card">
                   <%= cocktail.name %>
                 </div>
@@ -32,15 +25,8 @@
       <% else %>
         <div class="carousel-item">
           <div class="container carousel-container">
-            <div class="row justify-content-between carousel-top-row">
-              <% arr.slice(0, 3).each do |cocktail| %>
-                <div class="cocktail-card">
-                  <%= cocktail.name %>
-                </div>
-              <% end %>
-            </div>
-            <div class="row justify-content-between carousel-bottom-row">
-              <% arr.slice(3, 3).each do |cocktail| %>
+            <div class="d-flex flex-row flex-wrap justify-content-around carousel-row">
+              <% arr.each do |cocktail| %>
                 <div class="cocktail-card">
                   <%= cocktail.name %>
                 </div>

@@ -11,7 +11,7 @@ body {
 .content-container {
   background-image: asset-url('neon_background.jpg');
   background-size: cover;
-  height: 1000px;
+  min-height: 1170px;
   animation: none;
   position: relative;
 }
@@ -58,7 +58,7 @@ body {
 #new-btn {
   position: absolute;
   top: 8px;
-  right: 16px;
+  right: 43px;
   font-family: 'Rancho', cursive;
   color: white;
   font-size: 24px;
