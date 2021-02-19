@@ -6,33 +6,57 @@
 
 
 
-<div id="carouselExampleControls" class="carousel slide" data-interval="false">
+<div id="cocktail-carousel" class="carousel slide" data-interval="false">
   <div class="carousel-inner">
     <% cocktails_subarray.each_with_index do |arr, index| %>
       <% first_slide = index == 0 ? true : false %>
       <% if first_slide %>
         <div class="carousel-item active">
-          <div class="carousel-container">
-            <% arr.each do |cocktail| %>
-              <div class="cocktail-card">
-                <%= cocktail.name %>
-              </div>
-            <% end %>
+          <div class="container carousel-container">
+            <div class="row justify-content-between carousel-top-row">
+              <% arr.slice(0, 3).each do |cocktail| %>
+                <div class="cocktail-card">
+                  <%= cocktail.name %>
+                </div>
+              <% end %>
+            </div>
+            <div class="row justify-content-between carousel-bottom-row">
+              <% arr.slice(3, 3).each do |cocktail| %>
+                <div class="cocktail-card">
+                  <%= cocktail.name %>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       <% else %>
         <div class="carousel-item">
-          <%= arr %>
+          <div class="container carousel-container">
+            <div class="row justify-content-between carousel-top-row">
+              <% arr.slice(0, 3).each do |cocktail| %>
+                <div class="cocktail-card">
+                  <%= cocktail.name %>
+                </div>
+              <% end %>
+            </div>
+            <div class="row justify-content-between carousel-bottom-row">
+              <% arr.slice(3, 3).each do |cocktail| %>
+                <div class="cocktail-card">
+                  <%= cocktail.name %>
+                </div>
+              <% end %>
+            </div>
+          </div>
         </div>
       <% end %>
     <% end %>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <a class="carousel-control-prev carousel-control" href="#cocktail-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <a class="carousel-control-next carousel-control" href="#cocktail-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
