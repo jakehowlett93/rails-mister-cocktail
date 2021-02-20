@@ -1,6 +1,6 @@
 <h3>Create a new cocktail</h3>
 <%= simple_form_for [ @cocktail ] do |f| %>
-  <%= f.input :name, input_html: { maxlength: 19 }  %>
+  <%= f.input :name, input_html: { maxlength: 30 }  %>
   <%= f.input :photo, as: :file %>
   <%= f.submit "Submit", class: "btn btn-primary purple" %>
 <% end %>
