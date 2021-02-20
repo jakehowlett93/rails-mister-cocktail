@@ -1,9 +1,9 @@
 module CocktailsHelper
   def photo_for(instance)
     if instance.photo.attached?
-      return cl_image_tag(instance.photo.key, width: 250, height: 250)
+      return cl_image_tag(instance.photo.key, width: 250, height: 250, crop: "scale")
     else
-      return cl_image_tag('dh51wnb9fkvfzmglfnjx', width: 250, height: 250)
+      return cl_image_tag('dh51wnb9fkvfzmglfnjx', width: 250, height: 250, crop: "scale")
     end
   end
 
@@ -11,7 +11,7 @@ module CocktailsHelper
     if instance.photo.attached?
       return cl_image_tag(instance.photo.key, width: 300, height: 350)
     else
-      return cl_image_tag('dh51wnb9fkvfzmglfnjx', width: 300, height: 350)
+      return cl_image_tag('dh51wnb9fkvfzmglfnjx', width: 300, height: 350, crop: "scale")
     end
   end
 end
