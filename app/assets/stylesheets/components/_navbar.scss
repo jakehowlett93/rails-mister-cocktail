@@ -3,17 +3,26 @@
   background-color: transparent;
   color: white;
   padding: 8px 0;
-}
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+  .navbar-brand {
+    margin: 0 auto;
+  }
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 250px;
   height: 55px;
+  margin:0 auto;
 }
 
 .navbar-link {
 	color: #ffffff;
+}
+
+@include media-breakpoint-up(sm) {
+  .navbar-lewagon {
+    .navbar-brand {
+      margin: 0 10px;
+    }
+  }
 }
