@@ -9,12 +9,15 @@
   <h1><%= @cocktail.name %></h1>
   <%= big_photo_for(@cocktail) %>
   <ul>
+    <h5>Ingredients</h5>
     <% @cocktail.doses.each do |dose| %>
       <li>
         <div>
           <%= dose.description %>
           <%= dose.ingredient.name %>
-          <%= link_to 'Delete', dose_path(dose), class: "delete-btn", method: :delete, data: { confirm: "Are you sure?"} %>
+          <%= link_to dose_path(dose), class: "delete-btn", method: :delete, data: { confirm: "Are you sure?"} do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
         </div>
       </li>
     <% end %>
