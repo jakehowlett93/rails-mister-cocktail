@@ -9,7 +9,7 @@
   <h1><%= @cocktail.name %></h1>
   <%= big_photo_for(@cocktail) %>
   <ul>
-    <h5>Ingredients</h5>
+    <h2>Ingredients</h2>
     <% @cocktail.doses.each do |dose| %>
       <li>
         <div>
@@ -22,7 +22,7 @@
       </li>
     <% end %>
   </ul>
-  <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-secondary" %>
+  <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "glass-button ingredient-btn" %>
 </div>
 
 

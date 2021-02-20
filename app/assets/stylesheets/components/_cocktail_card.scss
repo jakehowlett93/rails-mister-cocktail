@@ -57,11 +57,11 @@ box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.75);
     font-size: 30px;
   }
 
-  h5 {
+  h2 {
     color: white;
     font-family: 'Rancho', cursive;
     padding: 5px;
-    font-size: 30px;
+    font-size: 18px;
     text-align: left;
   }
 
@@ -90,6 +90,8 @@ box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.75);
   div {
     display: flex;
     justify-content: space-between;
+    font-size: 12px;
+    font-family: $body-font;
   }
 
   .delete-btn {
@@ -127,7 +129,11 @@ box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.75);
     width: 550px;
     margin: 100px auto;
     h1 {
-      font-size: 40px;
+      font-size: 45px;
+    }
+
+    h2 {
+      font-size: 30px;
     }
 
     img {
@@ -137,6 +143,10 @@ box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.75);
 
     ul {
       padding: 20px 50px 0 50px;
+    }
+
+    div {
+      font-size: 16px;
     }
   }
 }

@@ -1,0 +1,15 @@
+.ingredient-btn {
+  color: white;
+  font-size: 12px;
+
+  &:hover {
+    text-decoration: none;
+    color: rgb(173, 167, 167);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .ingredient-btn {
+    font-size: 16px;
+  }
+}
