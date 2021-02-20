@@ -8,4 +8,14 @@ $orange: #E67E22;
 $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
-$purple: #6D1C8A
+$purple: rgba(228, 38, 142, 0.685);
+$light-blue: #6AB9F2;
+$bg-color: #2b1165;
+$fg-color: #f54171;
+$bg-gradient: linear-gradient(
+ 180deg,
+ $bg-color 0%,
+ rgba(26, 58, 130, 1) 37%,
+ rgba(171, 36, 177, 1) 69%,
+ $fg-color 100%
+);
