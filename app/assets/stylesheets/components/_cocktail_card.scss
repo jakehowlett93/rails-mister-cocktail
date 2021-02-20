@@ -42,7 +42,7 @@ box-shadow: 1px 2px black;
 .show-cocktail-card {
   width: 250px;
   height: 700px;
-  background-color:#222831ef;
+  background-color:#222831d3;
   border-radius: 8px;
   text-align: center;
   border: 1px solid black;
@@ -95,8 +95,13 @@ box-shadow: 1px 2px black;
 @include media-breakpoint-up(sm) {
   .show-cocktail-card {
     margin-bottom: 30px;
-    width: 550;
+    width: 550px;
     margin: 100px auto;
+    
+    img {
+      width: 300px;
+      height: 350px;
+    }
   }
 }
 
