@@ -8,11 +8,10 @@ text-align: center;
 border: 1px solid black;
 box-shadow: 1px 2px black;
 
- 
   .cocktail-link {
-    color: white;
-    font-family: 'Rancho', cursive;
     text-decoration: none;
+        color: white;
+    font-family: 'Rancho', cursive;
   }
   
   img {
@@ -31,7 +30,8 @@ box-shadow: 1px 2px black;
   }
 
   h2 {
-    padding-top: 5px;
+    padding: 10px 0;
+    font-size: 20px;
   }
 }
 
@@ -40,24 +40,26 @@ box-shadow: 1px 2px black;
 }
 
 .show-cocktail-card {
-  width: 550px;
+  width: 350px;
   height: 700px;
   background-color:#222831ef;
   border-radius: 8px;
   text-align: center;
   border: 1px solid black;
   box-shadow: 1px 2px black;
-  margin: 100px auto;
+  margin: 60px auto;
 
   h1 {
     color: white;
     font-family: 'Rancho', cursive;
     padding: 20px;
-    font-size: 60px;
+    font-size: 30px;
   }
 
   img {
     border-radius: 30px;
+    height: 200px;
+    width: 200px;
   }
 
   ul {
@@ -81,9 +83,34 @@ box-shadow: 1px 2px black;
   color: white;
 }
 
+.cocktail-link h2 {
+  font-family: 'Rancho', cursive;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@include media-breakpoint-up(sm) {
+  .show-cocktail-card {
+    margin-bottom: 30px;
+    width: 550;
+    margin: 100px auto;
+  }
+}
+
 @include media-breakpoint-up(md) {
   .cocktail-card {
     margin-bottom: 30px;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .show-cocktail-card {
+    h1 {
+      font-size: 60px;
+    }
   }
 }
 

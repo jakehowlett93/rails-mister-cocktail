@@ -1,5 +1,5 @@
 <div class="link-wrapper">
-  <%= link_to "New Cocktail", new_cocktail_path, class: "glass-button", id: "new-btn" %>
+  <%= link_to "New Cocktail", new_cocktail_path, class: "glass-button new-btn" %>
 </div>
 <% cocktails_subarray = @cocktails.each_slice(6).to_a %>
 <div id="cocktail-carousel" class="carousel slide" data-interval="false">
@@ -12,8 +12,8 @@
             <div class="d-flex flex-row flex-wrap justify-content-around carousel-row">
               <% sub_arr.each do |cocktail| %>
                 <div class="cocktail-card">
-                  <%= link_to cocktail_path(cocktail), class: "cocktail-link" do %>
-                  <h2><%= cocktail.name %></h2>
+                <%= link_to cocktail_path(cocktail), class: "cocktail-link" do %>
+                  <h2 ><%= cocktail.name %></h2>
                   <%= photo_for(cocktail) %>
                 <% end %>
                 </div>
@@ -27,8 +27,10 @@
             <div class="d-flex flex-row flex-wrap justify-content-around carousel-row">
               <% sub_arr.each do |cocktail| %>
                 <div class="cocktail-card">
-                  <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "cocktail-link" %></h2>
+                <%= link_to cocktail_path(cocktail), class: "cocktail-link" do %>
+                  <h2><%= cocktail.name %></h2>
                   <%= photo_for(cocktail) %>
+                <% end %>
                 </div>
               <% end %>
             </div>

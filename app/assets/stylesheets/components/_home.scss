@@ -59,7 +59,7 @@ body {
   margin: 16px 0 auto;
 }
 
-#new-btn {
+.new-btn {
   right: 37%;
   font-family: 'Rancho', cursive;
   color: white;
@@ -71,14 +71,34 @@ body {
     }
 }
 
+.back-btn {
+  position: absolute;
+  padding: 5px 30px;
+  top: 8px;
+  left: 43px;
+  font-family: 'Rancho', cursive;
+  color: white;
+  font-size: 24px;
+  z-index: 99;
+  display: none;
+  &:hover {
+      text-decoration: none;
+      color: rgb(173, 167, 167);
+    }
+}
+
 .light-background {
   background-color: rgba(255, 255, 255, 0.26);
 }
 
 @include media-breakpoint-up(md) {
-    #new-btn {
+    .new-btn {
       position: absolute;
       right: 43px;
       top: 8px;
   }  
+
+  .back-btn {
+    display: block;
+  }
 }
