@@ -13,6 +13,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.name = @cocktail.name.capitalize
     if @cocktail.save
       flash[:notice] = "Submitted Successfully"
       redirect_to cocktail_path(@cocktail)
