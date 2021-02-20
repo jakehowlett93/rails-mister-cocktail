@@ -17,10 +17,3 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
-
-import { initScrollUpOnClick } from '../components/carousel';
-
-document.addEventListener('turbolinks:load', () => {
-  // Call your JS functions here
-  initScrollUpOnClick();
-});

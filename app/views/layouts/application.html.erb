@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mister Cocktail</title>
+    <title>Bar 93</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,15 +16,17 @@
     <div class="main-container">
       <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
         <%= link_to cocktails_path, class: "navbar-brand" do %>
-          <%= image_tag "logo.png", alt: "Mister Cocktail", width: 200 %>
+          <%= image_tag "logo.png", alt: "Bar 93", width: 200 %>
         <% end %>
       </div>
-        <div class="light-background">
-          <div class="content-container neon-border">
-          <%= link_to "New Cocktail", new_cocktail_path, class: "glass-button", id: "new-btn" %>
-            <%= yield %>
-          </div>
+      <% flash.each do |type, msg| %>
         <div>
+          <%= msg %>
+        </div>
+      <% end %>
+        <div class="content-container neon-border">
+          <%= yield %>
+        </div>
       </div>
       </div>
     </div>
