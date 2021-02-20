@@ -1,7 +1,16 @@
-.notice {
+.show-cocktail-card .notice {
   position: absolute;
   background-color: rgb(240, 240, 212);
-  margin: 0 auto;
-  width: 140px;
-  font-size: 12px;
+  margin: 5px 15px;
+  border-radius: 30px;
+  width: 100px;
+  font-size: 8px;
+  padding: 0 3px;
   }
+
+@include media-breakpoint-up(md) {
+  .show-cocktail-card .notice {
+    font-size: 12px;
+    width: 150px;
+  }
+}

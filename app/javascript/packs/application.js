@@ -17,3 +17,10 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
+
+import { initFlashFadeOut } from '../components/flash';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  initFlashFadeOut();
+});
