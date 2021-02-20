@@ -2,6 +2,9 @@
   <%= link_to "New Cocktail", new_cocktail_path, class: "glass-button new-btn" %>
 </div>
 <%= link_to 'back', cocktails_path, class: "glass-button back-btn" %>
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
 <div class="show-cocktail-card">
   <h1><%= @cocktail.name %></h1>
   <%= big_photo_for(@cocktail) %>
